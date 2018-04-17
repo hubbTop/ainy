@@ -1,0 +1,93 @@
+JFrame – java的GUI程序的基本思路是以JFrame为基础，它是屏幕上window的对象，能够最大化、最小化、关闭。
+
+JPanel – Java图形用户界面(GUI)工具包swing中的面板容器类，包含在javax.swing 包中，可以进行嵌套，功能是对窗体中具有相同逻辑功能的组件进行组合，是一种轻量级容器，可以加入到JFrame窗体中。。
+
+JLabel – JLabel 对象可以显示文本、图像或同时显示二者。可以通过设置垂直和水平对齐方式，指定标签显示区中标签内容在何处对齐。默认情况下，标签在其显示区内垂直居中对齐。默认情况下，只显示文本的标签是开始边对齐；而只显示图像的标签则水平居中对齐。
+
+JTextField –一个轻量级组件，它允许编辑单行文本。
+
+JPasswordField – 允许我们输入了一行字像输入框，但隐藏星号(*) 或点创建密码(密码)
+
+JButton – JButton 类的实例。用于创建按钮类似实例中的 "Login"。
+
+开发以后用myeclipce。实在用不习惯用eclipse或者其他的都行。弄完之后先学习swing。 用swing写一个登陆界面。登陆之后跳转到主页。主页里面包含swing里面的以下几个组件：JButton  JRadioButton  JLabel  JTextField  JComboBox   JTable  。这些到百度上找资料都可以找到的。swing学的差不多时跟我说。
+
+JButton:按钮组件
+1:按钮在Swing中是较为常见的组件，用于触发特定动作
+Swing中提供了多种按钮，包括提交按钮，复选框，单选按钮等
+这些按钮都是从AbstractButton类中继承而来的 
+2:Swing中的提交按钮组件(JButton)由JButton对象表示
+JButton含有4种主要的构造方法
+参数text,icon分别代表显示文字标签和图标  
+3：本实例使用了两种方式创建按钮，第一种是在初始化按钮时赋予按钮图标与文字
+这种初始化必须先获得图片路径，然后将路径实例化到Icon，然后在Button中加载出来
+第二种方式是首先创建一个没有定义图标和文字的按钮对象，然后使用
+setIcon()方法为这个按钮定制一个图标。
+setToolTipText()方法是为按钮设置提示文字，鼠标停留在按钮上面即可
+setBorderPainted()方法设置边界是否显示
+setMaximumSize()方法设置按钮的大小与图标的大小一致，该类方法需要的参数类型是
+Dimension类对象，这样看上去此图片就如同按钮一样摆放在窗体中，
+同时也可以使用setEnabled()方法设置按钮是否可用
+
+
+JRadioButton：单选框组件
+
+JRadioButton类的常用构造方法有以下几个：
+JRadioButton()：用空标题构造单选按钮。
+JRadioButton(String s)：用给定的标题s构造单选按钮。
+JRadioButton(String s,boolean b)：用给定的标题s构造单选按钮,参数b设置选中与否的初始状态。
+单选按钮使用时需要使用ButtonGroup将单选按钮分组，单选按钮的分组方法是先创建对象，然后将同组的单选按钮添加到同一个ButtonGroup对象中。参见例6.2程序的子类panel1的声明，组内有3个单选按钮。
+选择项目事件处理
+用户对选择框或单选按钮做出选择后，程序应对这个选择作出必要的响应，程序为此要处理选择项目事件。选择项目处理程序的基本内容有：
+监视选择项目对象的类要实现接口ItemListener,
+程序要声明和建立选择对象，
+为选择对象注册监视器，
+编写处理选择项目事件的接口方法itemStateChanged(ItemEvent e),在该方法内用getItemSelectable()方法获取事件源，并作相应处理。
+
+JCheckBox：复选框组件
+
+JCheckBox类的其他常用方法如下：
+getState()：获取选择框的状态。
+setState(boolean b)：设置选择框的状态
+getLabel()：获取选择框的标题。
+setLabel(String s)：设置选择框的标题。
+isSelected()：获取选择框是否被选中的状态。
+itemStateChanged(ItemEvent e)：处理选择框事件的接口方法。
+getItemSelectable()：获取可选项，获取事件源。
+addItemListener(ItemListener l)：为选择框设定监视器。
+removeItemListener(ItemListener l)：移去选择框的监视器。
+
+JLabel：标签组件：
+
+JTextField：文本域组件：
+
+JComboBox： 下拉选择框；
+
+JTable：表格组件；
+
+JPasswordField：密码文本域组件：
+
+
+网格布局管理器：GridBagLayout
+GridBagLayout是所有AWT布局管理器当中最复杂的，同时他的功能也是最强大的。GridBagLayout同GridLayout一样，在容器中以网格形式来管理组件。但GridBagLayout功能要来得强大得多。
+1、GridBagLayout管理的所有行和列都可以是大小不同的；
+2、GridLayout把每个组件限制到一个单元格，而GridBagLayout并不这样：组件在容器中可以占据任意大小的矩形区域。
+GridBagLayout通常由一个专用类来对他布局行为进行约束，该类叫GridBagConstraints。其中有11个公有成员变量，GridBagConstraints可以从这11个方面来进行控制和操纵。这些内容是：
+1、gridx—组件的横向坐标；
+2、girdy—组件的纵向坐标；
+3、gridwidth—组件的横向宽度，也就是指组件占用的列数；
+4、gridheight—组件的纵向长度，也就是指组件占用的行数；
+5、weightx—指行的权重，告诉布局管理器如何分配额外的水平空间；
+6、weighty—指列的权重，告诉布局管理器如何分配额外的垂直空间；
+7、anchor—当组件小于其显示区域时使用此字段；
+8、fill—如果显示区域比组件的区域大的时候，可以用来控制组件的行为。控制组件是垂直填充，还是水平填充，或者两个方向一起填充；
+9、insets—指组件与表格空间四周边缘的空白区域的大小；
+10、ipadx— 组件间的横向间距，组件的宽度就是这个组件的最小宽度加上ipadx值；
+11、ipady— 组件间的纵向间距，组件的高度就是这个组件的最小高度加上ipady值。
+说明：
+1、gridx，gridy：其实就是组件行列的设置，注意都是从0开始的，比如 gridx=0，gridy=1时放在0行1列；
+2、gridwidth，gridheight：默认值为1；GridBagConstraints.REMAINDER常量，代表此组件为此行或此列的最后一个组件，会占据所有剩余的空间；
+3、weightx，weighty：当窗口变大时，设置各组件跟着变大的比例。比如组件A的weightx=0.5，组件B的weightx=1，那么窗口X轴变大时剩余的空间就会以1：2的比例分配给组件A和B；
+4、anchor：当组件空间大于组件本身时，要将组件置于何处。 有CENTER（默认值）、NORTH、NORTHEAST、EAST、SOUTHEAST、WEST、NORTHWEST选择。
+5、insets：设置组件之间彼此的间距。它有四个参数，分别是上，左，下，右，默认为（0，0，0，0）。
+效果：
