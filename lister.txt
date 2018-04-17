@@ -6,6 +6,7 @@ public class JTableDemo {
 	  JTable()
 	  JTable(int numRows, int numColumns)
 	  JTable(Object[][] rowData, Object[] columnNames)
+	  怎么使用数组来创建表格
 	  */
 	  
 	  JTable example1 = new JTable ();//看不到但存在
