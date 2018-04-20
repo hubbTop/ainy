@@ -1,0 +1,11 @@
+/bin
+/dist
+/build
+/.project
+/.classpath
+/.settings
+/*.log
+/bin
+/db
+
+/.myeclipse

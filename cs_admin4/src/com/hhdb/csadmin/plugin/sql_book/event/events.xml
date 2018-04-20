@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<events>
+	<event from="com.hhdb.csadmin.plugin.test" to="com.hhdb.csadmin.plugin.sql_book" type="CMD">
+		<property name="CMD">
+			SQLBook
+		</property>
+	</event>
+</events>
