@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<conns> 	
-	<conn host="localhost" post="1432" database="hhdb" username="dba" password="123456" />
-	<conn host="192.168.2.253" post="1432" database="hhdb" username="dba" password="123456" />
-	<conn host="118.190.201.243" post="1432" database="hhdb" username="dba" password="123456" />
-	<conn host="192.168.2.253" post="1438" database="hhdb" username="dba" password="123456" />
-	<conn host="192.168.2.66" post="1432" database="hhdb" username="dba" password="123456" />
-</conns>

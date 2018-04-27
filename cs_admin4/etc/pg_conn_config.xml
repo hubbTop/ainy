@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<conns> 	
-	<conn host="localhost" post="5432" database="postgres" username="postgres" password="123456" />
-	<conn host="192.168.2.22" post="5432" database="postgres" username="postgres" password="123456" />
-</conns>
